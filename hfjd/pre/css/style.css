@@ -111,7 +111,7 @@ body { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, 'serif'
 .navigation ul li a:hover, .navigation ul li.active a { color:#1dc468; }
 /*======================= Sub Menu ======================*/
 
-.navigation ul ul { width:150px; border:1px solid #1f242a; background:url(../img/subMenuBg.png) repeat left top; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; behavior:url(PIE.html); list-style:none; padding:0px; margin:0px; }
+.navigation ul ul { width:160px; border:1px solid #1f242a; background:url(../img/subMenuBg.png) repeat left top; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; behavior:url(PIE.html); list-style:none; padding:0px; margin:0px; }
 .navigation ul li.active li a { color:#acb3bf !important; }
 .navigation ul li.active li a:hover { color:#fff !important; }
 .navigation ul li li { float:none; height:30px; line-height:30px; color:#acb3bf !important; font-weight:normal !important; display:block; background:none; text-align:left; padding:0px; }
@@ -420,7 +420,7 @@ body { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, 'serif'
 .protfolioBox_border { border-bottom:#d6d6d8 1px dotted; height:60px; width:100%; }
 .protfolioBox_Menu h2 { width:170px; float:left; font-size:14px; font-weight:500; text-transform: uppercase; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial; padding:25px 0 0 0; width:auto; }
 .protfolioBox_Menu ul { list-style:none; padding:0px; margin:0px; text-align:right; float:right; width:auto; }
-.protfolioBox_Menu ul li { display:inline; float:left; font-size:12px; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,'serif'; line-height:65px; list-style:lower-roman; padding:0 25px; }
+.protfolioBox_Menu ul li { display:inline; float:left; font-size:12px; font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,'serif'; line-height:65px; list-style:lower-roman; padding:0 10px; }
 .protfolioBox_Menu ul li.nopad2 { padding-right:0px; }
 .protfolioBox_Menu ul li a { color:#909090; }
 .protfolioBox_Menu ul li a:hover, .protfolioBox_Menu ul li.active a { color:#1dc468; }
@@ -428,6 +428,7 @@ body { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, 'serif'
 .protfolioBox1 ul { list-style:none; padding:0px; margin:0px; clear:both; }
 .protfolioBox1 ul li { float:left; margin:16px 16px 0 0; }
 .small_PicBox { width:230px; height:133px; display:block; background:#ededed; border:0px solid #cecece; float:left;  overflow:hidden !important; text-align:center; cursor:pointer; position:relative; }
+.small_PicBox img{width:230px; height:133px;}
 .boxHover { width:232px; height:133px; position:absolute; display:block; top:0; left:0; text-align:center; z-index:100; display:none; }
 .boxHover a { width:232px; height:133px; position:absolute; display:block; top:0; font-size:12px; line-height:14px; color:#FFF;  left:0; text-align:center; z-index:100;  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial; background:url(../img/trans_pluse-copy.png) no-repeat top left; }
 .boxHover a span { display:block; background:url(../img/trans.png) repeat top left; height:27px; padding:4px 0 0 0; position:absolute; bottom:0; left:0; width:230px; bottom:-36px; }
