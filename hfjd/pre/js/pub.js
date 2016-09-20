@@ -332,7 +332,7 @@ function loadFooter() {
 	a.push('</section>');
 	a.push('<section class="footer_mid">');
 	a.push('<div class="box2_text">');
-	a.push('<p>上海恒丰机电设备有限公司是压缩空气动力系统设备的销售安装维修保养服务于一体的专业公司。</p>');
+	a.push('<p>上海恒服机电设备有限公司是压缩空气动力系统设备的销售安装维修保养服务于一体的专业公司。</p>');
 	a.push('<p>是瑞典(阿特拉斯.科普柯) 授权的“湖北授权代理商授权服务商”、“阿特拉斯空压机、零部件及消耗品销售、维修服务中心”</p>');
 	a.push('</div>');
 
@@ -355,7 +355,7 @@ function loadFooter() {
 	a.push('</section>');
 	a.push('<section class="footer_bottom">');
 	a
-			.push('沪ICP备16034307号&copy; 版权所有 <a href="http://hf021.cn" target="_blank">上海恒丰机电设备有限公司</a>');
+			.push('沪ICP备16034307号&copy; 版权所有 <a href="http://hf021.cn" target="_blank">上海恒服机电设备有限公司</a>');
 	a.push('<div class="clear"></div>');
 
 	a.push('</section></section>');
