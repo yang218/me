@@ -46,13 +46,7 @@
 					<li><a href="index.html">首页</a></li>
 					<li><a href="aboutus.html">关于我们</a></li>
 					<li class="active"><a href="#">产品展示</a>
-						<ul id="e_top_nav">
-							<li><a href="portfolio.html">固定压缩机</a></li>
-							<li><a href="portfolio.html">移动式压缩机</a></li>
-							<li><a href="portfolio.html">空气和气体后处理设备</a></li>
-							<li><a href="portfolio.html">空气管路系统</a></li>
-							<li><a href="portfolio.html">真空泵</a></li>
-						</ul></li>
+						<ul id="e_top_nav"></ul></li>
 					<li><a href="serviceins.html">服务案例</a></li>
 					<li id="nosep"><a href="contact.html">联系我们</a></li>
 				</ul>
@@ -172,29 +166,26 @@
 <script type="text/javascript" src="js/jquery.twitter.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript">
-	$(document).ready(
-			function() {
-				loadData(getUrl('tp', '?'));
-				bindFilterEvent();
-				$('.ourHolder li').live('hover', function() {
-					$('.ourHolder li').hover(function() {
-						$(this).find('.boxHover').fadeIn();
-						$(this).find('.boxHover span').animate({
-							bottom : '0px'
-						}, {
-							queue : false
-						});
-					}, function() {
-						$(this).find('.boxHover').fadeOut();
-						$(this).find('.boxHover span').animate({
-							bottom : '-36px'
-						}, {
-							queue : false
-						});
-					});
+	$(document).ready(function() {
+		loadData(getUrl('tp', '?'));
+		bindFilterEvent();
+		$('.ourHolder li').live('hover', function() {
+			$('.ourHolder li').hover(function() {
+				$(this).find('.boxHover').fadeIn();
+				$(this).find('.boxHover span').animate({
+					bottom : '0px'
+				}, {
+					queue : false
 				});
-				$('.ourHolder li.trigger').find('.boxHover span').trigger(
-						'mouseenter');
+			}, function() {
+				$(this).find('.boxHover').fadeOut();
+				$(this).find('.boxHover span').animate({
+					bottom : '-36px'
+				}, {
+					queue : false
+				});
 			});
+		}).trigger('mouseenter');
+	});
 </script>
 </html>

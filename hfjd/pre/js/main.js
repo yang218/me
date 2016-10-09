@@ -17,7 +17,7 @@ function bindFilterEvent() {
 
 		// assign the class of the clicked filter option
 		// element to our $filterType variable
-		var $filterType = $(this).attr('class');
+		var $filterType = $(this).attr('data-type');
 		$(this).parent().addClass('active');
 		var $filteredData;
 		if ($filterType == 'all') {
@@ -34,11 +34,10 @@ function bindFilterEvent() {
 		// call quicksand and assign transition parameters
 		$holder.quicksand($filteredData, {
 			duration : 800,
+			attribute: 'id', 
 			easing : 'easeInOutQuad'
 		});
 
-		//$('.ourHolder li.trigger').find('strong').trigger('mouseenter');
-
-		return false;
+		$('.ourHolder li').trigger('mouseenter');
 	});
 }

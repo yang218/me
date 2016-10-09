@@ -51,139 +51,6 @@ var XConfig = {
 			}
 
 			]
-		}, {
-			n : '多通道可记录显示仪',
-			i : 'dtdkjlxs',
-			c : []
-		}, {
-			n : '空气质量仪器',
-			i : 'kqzlyq',
-			c : []
-		} ]
-	}, {
-		n : '固定式压缩机',
-		i : 'gdys',
-		c : [ {
-			n : '喷油螺杆式压缩机',
-			i : 'pylgys',
-			c : [ {
-				n : 'GX4-5/GXe7',
-				i : 'gx45e7'
-			}, {
-				n : 'GA 7-37 VS',
-				i : 'ga737vs'
-			}, {
-				n : 'GAe11-30/G',
-				i : 'gae1130g'
-			}, {
-				n : 'GA30+-90/G',
-				i : 'ga3090g'
-			}, {
-				n : 'G90-250',
-				i : 'g90250'
-			}, {
-				n : 'GA300-500',
-				i : 'ga300500'
-			} ]
-		}, {
-			n : '中高压空压机',
-			i : 'zgyky',
-			c : [ {
-				n : 'GA90-500',
-				i : 'ga90500'
-			} ]
-		}, {
-			n : '医疗用空气压缩机',
-			i : 'ylkqys',
-			c : [ {
-				n : '压缩空气过滤器',
-				i : 'yskqgl'
-			} ]
-		}, {
-			n : '活塞式压缩机',
-			i : 'hyys',
-			c : [ {
-				n : '15-55KW/20',
-				i : '1555kw20'
-			} ]
-		}, {
-			n : '无油涡旋压缩机',
-			i : 'wyxwys',
-			c : [ {
-				n : '管路系统',
-				i : 'glxt'
-			} ]
-		}, {
-			n : '无油旋齿压缩机',
-			i : 'wyxcys',
-			c : [ {
-				n : '无热再生吸附式压缩空',
-				i : 'wrzsxfys'
-			} ]
-		} ]
-	}, {
-		n : '移动式压缩机',
-		i : 'ydys',
-		c : [ {
-			n : '中型压缩机',
-			i : 'zxys',
-			c : [ {
-				n : '单轴喷油',
-				i : 'dzpy'
-			}, {
-				n : '中型: 单轴喷油螺杆',
-				i : 'zxdzpyxg'
-			} ]
-		}, {
-			n : '小型压缩机',
-			i : 'xxys',
-			c : [ {
-				n : '7系列: 单轮轴喷油',
-				i : '7dzpy'
-			} ]
-		} ]
-	}, {
-		n : '空气和气体后处理设备',
-		i : 'kqhcl',
-		c : [ {
-			n : '储气罐',
-			i : 'cqg',
-			c : [ {
-				n : '船用起动储气罐: 船',
-				i : 'cyqdcqg'
-			}, {
-				n : '船用工作储气罐: 船',
-				i : 'cygzcqg'
-			} ]
-		} ]
-	}, {
-		n : '空气管路系统',
-		i : 'kqgl',
-		c : [ {
-			n : '康帕斯管件',
-			i : 'kpsgj',
-			c : []
-		}, {
-			n : '阿特拉斯管件',
-			i : 'atlsgj',
-			c : []
-		} ]
-	}, {
-		n : '真空泵',
-		i : 'zkb',
-		c : [ {
-			n : '油封真空泵',
-			i : 'yfzkb',
-			c : [ {
-				n : 'mVAC: 医用真空',
-				i : 'mvacygzk'
-			}, {
-				n : 'GV 630-480',
-				i : 'gv630480'
-			}, {
-				n : 'GV 20-300',
-				i : 'gv20300'
-			} ]
 		} ]
 	} ],
 	sl : [ {
@@ -216,17 +83,15 @@ function loadIDData(_tp) {
 	var b = [];
 	var obj = pdConfig[_tp];
 	if (!obj || obj == 'Undefined') {
-		for ( var key in pdConfig) {
-			obj = pdConfig[key];
-			break;
-		}
+		$('#e_desc').html('暂无介绍');
+		$('#e_pn').text(_tp);
+		return;
 	}
 	for (var i = 1; i <= obj.pn; i++) {
 		a.push('<li><img src="img/product/' + _tp + '_' + i
 				+ '.jpg" width="967" height="391" alt=""></li>');
 		b.push('<li><a href="#">' + i + '</a></li>');
 	}
-
 	$('#e_pdbg').html(a.join(''));
 	$('#e_snav').html(b.join(''));
 	$('#e_desc').html(obj.d);
@@ -251,11 +116,12 @@ function loadAllItems(_list) {
 	var item;
 
 	a
-			.push('<li class="active"><a href="#" class="all">所有<img src="img/p1.png" width="10" height="9"></a></li>');
+			.push('<li class="active"><a href="#" data-type="all">所有<img src="img/p1.png" width="10" height="9"></a></li>');
+	var c = 0;
 	for (var idx = 0; idx < _list.length; idx++) {
 		subNavObj = _list[idx];
 		a
-				.push('<li ><a href="#" class="'
+				.push('<li ><a href="#" data-type="'
 						+ subNavObj.i
 						+ '">'
 						+ subNavObj.n
@@ -268,8 +134,8 @@ function loadAllItems(_list) {
 			item = items[j];
 			b.push('<li class="small_PicBox trigger" data-type="');
 			b.push(subNavObj.i);
-			b.push('"><a href="#"><img src="img/product/' + item.i
-					+ '.jpg"/>');
+			b.push('" id="id-' + (++c) + '"><a href="#"><img src="img/product/'
+					+ item.i + '.jpg"/>');
 			b
 					.push('<div class="boxHover"><a href="single_page_portfolio.html?tp='
 							+ item.i
@@ -306,6 +172,27 @@ function getUrl(c, d) {
 	}
 	return "";
 }
+
+function loadIndexPro() {
+	var b = [];
+	var obj;
+	for (var i = 0; i < XConfig.pl.length; i++) {
+		obj = XConfig.pl[i];
+		if (i < 4 && obj.c && obj.c.length > 0) {
+			var subc = obj.c[0].c;
+			b.push('<div class="small_PicBox get_mar2">');
+			b.push('<a href="#"><img src="img/product/' + subc[0].i
+					+ '.jpg" alt=""></a>');
+			b.push('<div class="boxHover">');
+			b.push('<a href="portfolio.html?tp=' + obj.i + '"><span>' + obj.n
+					+ '</span></a>');
+			b.push('</div></div>');
+		}
+	}
+	b.push('<div class="clear"></div>');
+	$('#e_pdesc').html(b.join(''));
+}
+
 function loadTopNav() {
 	var a = [];
 	var obj;

@@ -84,13 +84,7 @@
 					<li class="active"><a href="index.html">首页</a></li>
 					<li><a href="aboutus.html">关于我们</a></li>
 					<li><a href="portfolio.html">产品展示</a>
-						<ul id="e_top_nav">
-							<li><a href="portfolio.html?tp=gdys">固定压缩机</a></li>
-							<li><a href="portfolio.html">移动式压缩机</a></li>
-							<li><a href="portfolio.html">空气和气体后处理设备</a></li>
-							<li><a href="portfolio.html">空气管路系统</a></li>
-							<li><a href="portfolio.html">真空泵</a></li>
-						</ul></li>
+						<ul id="e_top_nav"></ul></li>
 					<li><a href="serviceins.html">服务案例</a></li>
 					<li id="nosep"><a href="contact.html">联系我们</a></li>
 				</ul>
@@ -110,9 +104,6 @@
 				<!--container_middle Start-->
 				<section class="content_main2">
 					<!--content_main2 Start-->
-
-
-
 					<section class="contMain_left fltleft">
 						<!--contMain_left Start-->
 						<div class="bannerArea">
@@ -136,9 +127,35 @@
 								<div class="pager2"></div>
 							</div>
 							<!--banner2 End-->
-							<div class="titlehome">产品介绍</div>
+							<div class="titlehome">品牌代理</div>
 							<hr>
 							<div class="banner_smallBox">
+								<!--banner_smallBox Start-->
+
+								<div class="small_PicBox get_mar2">
+									<!--small_box Start-->
+									<a href="http://www.atlascopco.com.cn/cnzh" target="_blank"><img src="img/logo-atls2.jpg" alt=""></a>
+									<div class="boxHover">
+										<a href="http://www.atlascopco.com.cn/cnzh" target="_blank"><span>阿特拉斯（瑞典）</span></a>
+									</div>
+								</div>
+								<!--small_box End-->
+
+								<div class="small_PicBox get_mar2">
+									<!--small_box Start-->
+									<a href="http://www.cs-itec.com/?lang=zh-hans" target="_blank"><img src="img/logo-xes2.png" alt=""></a>
+									<div class="boxHover">
+										<a href="http://www.cs-itec.com/?lang=zh-hans" target="_blank"><span>希尔思（德国）</span></a>
+									</div>
+								</div>
+								<!--small_box End-->
+								<div class="clear"></div>
+							</div>
+
+
+							<div class="titlehome">产品介绍</div>
+							<hr>
+							<div class="banner_smallBox" id="e_pdesc">
 								<!--banner_smallBox Start-->
 
 								<div class="small_PicBox get_mar2">
@@ -177,8 +194,6 @@
 									</div>
 								</div>
 								<!--small_box End-->
-
-
 								<div class="clear"></div>
 							</div>
 							<!--banner_smallBox End-->
@@ -199,7 +214,7 @@
 							<!--small_box Start-->
 							<a href="#"><img src="img/serins/dyxsw.jpg" alt=""></a>
 							<div class="boxHover">
-								<a href="single_page_portfolio.html"><span>湖北淡雅香生物科技</span></a>
+								<a href="javascript:;"><span>湖北淡雅香生物科技</span></a>
 							</div>
 						</div>
 						<!--small_box End-->
@@ -208,7 +223,7 @@
 							<!--small_box Start-->
 							<a href="#"><img src="img/serins/hstp.jpg" alt=""></a>
 							<div class="boxHover">
-								<a href="single_page_portfolio.html"><span>海斯坦普金属成型</span></a>
+								<a href="javascript:;"><span>海斯坦普金属成型</span></a>
 							</div>
 						</div>
 						<!--small_box End-->
@@ -217,7 +232,7 @@
 							<!--small_box Start-->
 							<a href="#"><img src="img/serins/tpak.jpg" alt=""></a>
 							<div class="boxHover">
-								<a href="single_page_portfolio.html"><span>太平爱克电线电缆</span></a>
+								<a href="javascript:;"><span>太平爱克电线电缆</span></a>
 							</div>
 						</div>
 						<!--small_box End-->
@@ -227,7 +242,7 @@
 							<!--small_box Start-->
 							<a href="#"><img src="img/serins/zbsxwl.jpg" alt=""></a>
 							<div class="boxHover">
-								<a href="single_page_portfolio.html"><span>中百生鲜物流园</span></a>
+								<a href="javascript:;"><span>中百生鲜物流园</span></a>
 							</div>
 						</div>
 						<!--small_box End-->
@@ -320,7 +335,7 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		loadTopNav();
+		loadIndexPro();
 		$('.slider').cycle({
 			fx : 'scrollHorz',
 			timeout : 4000,
@@ -351,19 +366,12 @@
 			}, {
 				queue : false
 			});
-		});
+		}).trigger('mouseenter');
 	});
 </script>
-
-
 <script>
 	document.getElementsByTagName('html')[0].setAttribute('id', 'js-1')
 </script>
 <!--[if lte IE 8]><script src="media/scripts/lteie8.js"></script><![endif]-->
 <!--<script src="js/jquery.min.js"></script>-->
-
-<!--<script src="media/scripts/libs/jquery.easing.js"></script>-->
-<!--<script src="media/scripts/gridslider/gridslider.js"></script>-->
-<script src="media/scripts/gridslider/gridslider.1.0.min.js"></script>
-<script src="media/scripts/main.js"></script>
 </html>
